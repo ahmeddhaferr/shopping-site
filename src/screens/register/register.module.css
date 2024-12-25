@@ -1,8 +1,13 @@
+.background{
+  margin: auto;
+  width: 100%;
+
+}
 .content {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-top: -188px;
+  margin-top: -248px;
   padding: 0 20px;
 }
 .content h1 {
@@ -20,7 +25,7 @@
   margin-left: 10px;
   margin-top: 50px;
   border-radius: 50%;
-  border: 2px dashed #004bfe;
+  border: 2px dashed #004bfe ;
   width: 90px;
   height: 90px;
   display: flex;
@@ -43,9 +48,19 @@
   border-radius: 60px;
   border: none;
   outline-color: #004bfe;
+  font-family: Poppins;
+
 }
 .inputSection input::placeholder {
   color: #d2d2d2;
+  font-family: Poppins;
+font-size: 13.79px;
+font-weight: 500;
+line-height: 19.31px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
 }
 .numInput {
   width: 90%;
@@ -64,16 +79,15 @@
   outline: none;
   padding: 0;
   border-radius: 0;
+  font-family: Poppins;
+
 }
 .numInput input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.background {
-  width: 100%;
-  margin: auto;
-}
-.cancle {
+
+.cancel {
   margin: auto;
   font-family: Nunito Sans;
   font-size: 15px;
@@ -85,6 +99,7 @@
   margin-top: 24px;
   cursor: pointer;
   margin-bottom: 40px;
+  color: #202020;
 }
 .Eye {
   position: absolute;

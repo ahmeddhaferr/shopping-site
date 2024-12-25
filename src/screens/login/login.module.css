@@ -1,0 +1,71 @@
+.Background{
+  margin: auto;
+width: 100%;
+}
+.login {
+  padding: 0px 20px;
+  margin-top: -600px;
+}
+
+.login h1 {
+  font-family: Raleway;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 61.05px;
+  letter-spacing: -0.5199999809265137px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.heart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.heart p {
+  font-family: Nunito Sans;
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 35px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-top: 4px;
+}
+.login input {
+  font-family: Poppins;
+
+  padding: 16px 20px;
+  height: 20px;
+  background-color: #f8f8f8;
+  border-radius: 60px;
+  border: none;
+  outline-color: #004bfe;
+  width: 88%;
+  margin-top: 18px;
+}
+.login input::placeholder {
+  color: #d2d2d2;
+
+  font-family: Poppins;
+  font-size: 13.79px;
+  font-weight: 500;
+  line-height: 19.31px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.cancel {
+  margin: auto;
+  font-family: Nunito Sans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-top: 24px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  color: #202020;
+}
