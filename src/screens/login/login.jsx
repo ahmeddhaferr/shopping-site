@@ -8,7 +8,7 @@ import { Link } from "react-router";
 export default function Login() {
   return (
     <div>
-              <LoginBackground className={styles.Background} />
+      <LoginBackground className={styles.Background} />
 
       <Container>
         <div className={styles.login}>
@@ -20,9 +20,8 @@ export default function Login() {
           <input type="text" placeholder="Email" />
           <CostumeButton name="next" mgtop="45px" />
           <Link to={"/"}>
-          <p className={styles.cancel} >
-            Cancel
-          </p></Link>
+            <p className={styles.cancel}>Cancel</p>
+          </Link>
         </div>
       </Container>
     </div>
