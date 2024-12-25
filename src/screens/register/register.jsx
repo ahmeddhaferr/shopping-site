@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./register.module.css";
-import Container from "../../components/container/container.jsx";
+import Container from "../../components/container/Container.jsx";
 import Background from "../../assets/rigisterBackground.jsx";
 import Camera from "../../assets/camera.jsx";
 import CostumeButton from "../../components/costumeButton/costumeButton.jsx";

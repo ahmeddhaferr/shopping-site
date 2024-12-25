@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../../components/container/container";
+import Container from "../../components/container/Container";
 import styles from "./login.module.css";
 import LoginBackground from "../../assets/LoginBackground";
 import Heart from "../../assets/blackHeart.svg";
