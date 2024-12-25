@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Starter.module.css";
-import Container from "../../components/container/Container.jsx";
+import Container from "../../components/container/container.jsx";
 import Bag from "../../assets/bag.jsx";
 import CostumeButton from "../../components/costumeButton/costumeButton.jsx";
 import arrow from "../../assets/rightArrow.svg";
