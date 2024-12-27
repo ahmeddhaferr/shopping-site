@@ -31,6 +31,26 @@ const catagory = [
     image:
       "https://assets-prd.ignimgs.com/2022/10/14/batmanandrobinps-1665763168536.jpg?width=114&crop=1%3A1%2Csmart&auto=webp",
   },
+  {
+    name: "dress",
+    image:
+      "https://assets-prd.ignimgs.com/2022/10/14/batmanandrobinps-1665763168536.jpg?width=114&crop=1%3A1%2Csmart&auto=webp",
+  },
+  {
+    name: "dress",
+    image:
+      "https://assets-prd.ignimgs.com/2022/10/14/batmanandrobinps-1665763168536.jpg?width=114&crop=1%3A1%2Csmart&auto=webp",
+  },
+  {
+    name: "dress",
+    image:
+      "https://assets-prd.ignimgs.com/2022/10/14/batmanandrobinps-1665763168536.jpg?width=114&crop=1%3A1%2Csmart&auto=webp",
+  },
+  {
+    name: "dress",
+    image:
+      "https://assets-prd.ignimgs.com/2022/10/14/batmanandrobinps-1665763168536.jpg?width=114&crop=1%3A1%2Csmart&auto=webp",
+  },
 ];
 const itemcard = [
   {
@@ -96,7 +116,10 @@ export default function Home() {
             <div className={styles.items}>
               {itemcard?.map((card, index) => (
                 <div key={index}>
-                  <div className={styles.item}> <img src={card.image} /> </div>
+                  <div className={styles.item}>
+                    {" "}
+                    <img src={card.image} />{" "}
+                  </div>
                   <p>{card.discription}</p>
                   <h2>${card.price}</h2>
                 </div>
