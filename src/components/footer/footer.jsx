@@ -5,28 +5,28 @@ import HeartBtn from "../../assets/heartBtn";
 import PaperBtn from "../../assets/paperBtn";
 import CartBtn from "../../assets/cartBtn";
 import PersonBtn from "../../assets/personBtn";
-import Container from "../container/container";
-import { Link } from "react-router";
+import { Link,useLocation  } from "react-router";
 
 export default function Footer({ open }) {
+  let {pathname} = useLocation()
   return (
     <>
       {open && (
           <div className={styles.footer}>
             <Link to={"/Home"}>
-              <HomeBtn />
+              <HomeBtn color={pathname === "/Home" ? "black":"#004CFF"} line={pathname === "/Home" ? "3":"0"}/>
             </Link>
-            <Link >
-              <HeartBtn />
+            <Link to={"/Wishlist"}>
+              <HeartBtn color={pathname === "/Wishlist" ? "black":"#004CFF"} line={pathname === "/Wishlist" ? "3":"0"}/>
             </Link>
-            <Link>
-              <PaperBtn />
+            <Link to={"/Categories"}>
+              <PaperBtn color={pathname === "/Categories" ? "black":"#004CFF"} line={pathname === "/Categories" ? "3":"0"}/>
             </Link>
-            <Link>
-              <CartBtn />
+            <Link to={"/Cart"}>
+              <CartBtn color={pathname === "/Cart" ? "black":"#004CFF"} line={pathname === "/Cart" ? "3":"0"}/>
             </Link>
-            <Link to={"/"}>
-              <PersonBtn />
+            <Link to={"/Profile"}>
+              <PersonBtn color={pathname === "/Profile" ? "black":"#004CFF"} line={pathname === "/Profile" ? "3":"0"}/>
             </Link>
           </div>
       )}
