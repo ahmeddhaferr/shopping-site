@@ -1,0 +1,126 @@
+.shopTop {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 0px 20px;
+}
+.shop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.shop h1 {
+  font-family: Raleway;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.2800000011920929px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #202020;
+}
+.search {
+  width: 100%;
+  background-color: #e5ebfc;
+  padding: 10px 16px;
+  height: 16px;
+  border-radius: 18px;
+}
+.catagories {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.imgContainer {
+  width: 60px;
+  height: 60px;
+  border: 5px solid white;
+  border-radius: 50%;
+  background-color: #e5ebfc;
+  box-shadow: 0px 5px 10px 0px #00000029;
+  overflow: hidden;
+}
+.imgContainer img {
+  width: 60px;
+}
+.catagori p {
+  font-family: Raleway;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: -0.12999999523162842px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #202020;
+  margin-top: 10px;
+}
+.allItems {
+  margin-top: 24px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.allItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.allItem p {
+  font-family: Raleway;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.20999999344348907px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #202020;
+}
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.items p {
+  margin-top: 8px;
+  width: 155px;
+  font-family: Nunito Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.items h2 {
+  margin-top: 8px;
+  font-family: Raleway;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: -0.17000000178813934px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.item {
+  width: 155px;
+  height: 171px;
+  background-color: #e5ebfc;
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 0px #0000001a;
+  overflow: hidden;
+
+}
+.item img{
+  width: 155px;
+}

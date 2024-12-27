@@ -19,9 +19,9 @@ export default function Starter() {
           </div>
           <h1>Shoppe</h1>
           <h5>Beautiful eCommerce UI Kit for your online store</h5>
-          <div style={{marginTop:"130px"}}>
+          <div style={{marginTop:"130px",width:"100%"}}>
           <Link to={"/Rigister"}>
-          <CostumeButton name="Let's get started" Width="300px"/></Link>
+          <CostumeButton name="Let's get started" /></Link>
           </div>
           
           <div className={styles.haveAccount}>

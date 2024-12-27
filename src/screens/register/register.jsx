@@ -51,6 +51,8 @@ export default function register() {
   const [country, setCountry] = useState(false);
   const [countryImg, setCountryImg] = useState(flags[1].image);
   const [KeyNumber, setKeyNumber] = useState(flags[1].key);
+  const [email, setEmail] = useState("");
+  const [inputPass, setInputPass] = useState("");
 
   const handlePassword = () => {
     if (password === "password") {
@@ -62,7 +64,7 @@ export default function register() {
 
   return (
     <>
-            <Background className={styles.background} />
+      <Background className={styles.background} />
 
       <Container>
         <div className={styles.content}>
@@ -71,8 +73,23 @@ export default function register() {
             <Camera />
           </div>
           <div className={styles.inputSection}>
-            <input type="text" placeholder="Email" />
-            <input type={password} placeholder="Password" />
+            <input
+              type="text"
+              placeholder="Email"
+              value={email}
+              on
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+            <input
+              type={password}
+              placeholder="Password"
+              value={inputPass}
+              onChange={(e) => {
+                setInputPass(e.target.value);
+              }}
+            />
             <Eye className={styles.Eye} onClick={handlePassword} />
             <div className={styles.numInput}>
               <div className={styles.flag}>
@@ -117,7 +134,12 @@ export default function register() {
               </>
             )}
           </div>
-          <CostumeButton name="Done" mgtop="52px" />
+          <div style={{ marginTop: "52px", width: "100%" }}>
+            <Link to={email === "" || inputPass === "" ? "" : "/Login"}>
+              <CostumeButton name="Done" />
+            </Link>{" "}
+          </div>
+
           <Link className={styles.cancel} to={"/"}>
             Cancel
           </Link>
