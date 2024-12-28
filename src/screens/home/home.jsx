@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./home.module.css";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import Container from "../../components/container/container";
 import { useMediaQuery } from "react-responsive";
+import ItemPopup from "../../components/itemPopup/itemPopup";
 
 const catagory = [
   {
@@ -87,11 +88,13 @@ const itemcard = [
 
 export default function Home() {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 750px)" });
+  const [isOpen,setIsOpen]=useState(false)
   return (
     <>
       <Container MaxWidth="1850px">
         <Header open={isSmallScreen ? false : true} />
         <Footer open={isSmallScreen ? true : false} />
+        <ItemPopup />
 
         <div className={styles.shopTop}>
           <div className={styles.shop}>
@@ -116,10 +119,10 @@ export default function Home() {
             <div className={styles.items}>
               {itemcard?.map((card, index) => (
                 <div key={index}>
-                  <div className={styles.item}>
+                  <button className={styles.item}>
                     {" "}
                     <img src={card.image} />{" "}
-                  </div>
+                  </button>
                   <p>{card.discription}</p>
                   <h2>${card.price}</h2>
                 </div>
