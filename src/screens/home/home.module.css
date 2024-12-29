@@ -123,4 +123,11 @@ cursor: pointer;
 }
 .item img{
   width: 155px;
+  transition: 0.2s;
+
+}
+.item img:hover{
+
+transform: scale(110%);
+transition: 0.4s;
 }
