@@ -119,15 +119,23 @@
   border-radius: 10px;
   box-shadow: 0px 5px 10px 0px #0000001a;
   overflow: hidden;
-cursor: pointer;
+  cursor: pointer;
 }
-.item img{
+.item img {
   width: 155px;
   transition: 0.2s;
-
 }
-.item img:hover{
-
-transform: scale(110%);
-transition: 0.4s;
+.item img:hover {
+  transform: scale(110%);
+  transition: 0.4s;
+}
+@media (max-width: 353px) {
+  .items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 10px;
+  }
 }

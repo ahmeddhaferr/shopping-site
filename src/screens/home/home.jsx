@@ -56,7 +56,7 @@ const catagory = [
 const itemcard = [
   {
     image:
-      "https://static.printler.com/cache/5/f/b/8/4/4/5fb8447cf8aa675bc0d1650a2b9ad032889da19a.jpg",
+      "https://conservewildcats.org/wp-content/uploads/sites/5/2023/12/Black-and-White-Stationery-Notes-A4-Document.png",
     discription: "Lorem ipsum dolor sit amet consectetur",
     price: 20,
   },
