@@ -119,8 +119,15 @@
   border-radius: 10px;
   box-shadow: 0px 5px 10px 0px #0000001a;
   overflow: hidden;
-
+cursor: pointer;
 }
 .item img{
   width: 155px;
+  transition: 0.2s;
+
+}
+.item img:hover{
+
+transform: scale(110%);
+transition: 0.4s;
 }
