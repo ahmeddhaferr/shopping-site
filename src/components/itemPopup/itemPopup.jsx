@@ -3,40 +3,31 @@ import styles from "./itemPopup.module.css";
 import CloseBtn from "../../assets/closeBtn";
 
 export default function ItemPopup({ Item, isOpen, onClose }) {
+  if (!isOpen) return null;
   return (
     <>
-      {isOpen && (
-        <>
-          <div className={styles.overlay}></div>
-          <div className={styles.pos}>
-            <div className={styles.image}>
-              <img src={Item} />
-              <div className={styles.cart}>
-                <div className={styles.flex}>
-                  <h1>Color Options</h1>
-                  <button onClick={onClose}>
-                    <CloseBtn />
-                  </button>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
-                  ut aliquam veritatis molestias quibusdam fugit fuga
-                  necessitatibus provident, nemo deleniti dolore illo
-                  voluptatibus autem delectus laboriosam minus at eaque
-                  doloremque!
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
-                  ut aliquam veritatis molestias quibusdam fugit fuga
-                  necessitatibus provident, nemo deleniti dolore illo
-                  voluptatibus autem delectus laboriosam minus at eaque
-                  doloremque!
-                </p>
-              </div>
+      <div className={styles.overlay}></div>
+      <div className={styles.pos}>
+        <div className={styles.itemcard}>
+          <div className={styles.image}>
+            <img src={Item} />
+          </div>
+          <div className={styles.cart}>
+            <div className={styles.colorOption}>
+              <h1>Color Options</h1>
+              <button onClick={onClose} className={styles.closebtn}>
+                <CloseBtn />
+              </button>
+            </div>
+            <div className={styles.colorOptionFlex}>
+              <button className={styles.colorOptionCard}></button>
+              <button className={styles.colorOptionCard}></button>
+              <button className={styles.colorOptionCard}></button>
+              <button className={styles.colorOptionCard}></button>
             </div>
           </div>
-        </>
-      )}
+        </div>
+      </div>
     </>
   );
 }
