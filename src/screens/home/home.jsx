@@ -95,7 +95,7 @@ export default function Home() {
       <Container MaxWidth="1850px">
         <Header open={isSmallScreen ? false : true} />
         <Footer open={isSmallScreen ? true : false} />
-
+<Container MaxWidth="750px">
         <div className={styles.shopTop}>
           <div className={styles.shop}>
             <h1>Shop</h1>
@@ -136,7 +136,7 @@ export default function Home() {
             </div>
             <div></div>
           </div>
-        </div>
+        </div></Container>
         <ItemPopup
           Item={itemOpen}
           isOpen={isOpen}

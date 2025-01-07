@@ -5,6 +5,7 @@ import More from "../../assets/more";
 import Less from "../../assets/less";
 import AddWish from "../../assets/addwish";
 import RightSign from "../../assets/rightSign.svg";
+import { useMediaQuery } from "react-responsive";
 
 const colors = [
   {
@@ -30,8 +31,9 @@ const sizes = [
 ];
 
 export default function ItemPopup({ Item, isOpen, onClose }) {
-  const [option, setOption] = useState({});
+  const [option, setOption] = useState(false);
   const [quantity, setQuantity] = useState(1);
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 750px)" });
   if (!isOpen) return null;
   return (
     <>
@@ -102,8 +104,9 @@ export default function ItemPopup({ Item, isOpen, onClose }) {
               </div>
             </div>
             <div className={styles.actionbtns}>
-
-              <button className={styles.addwish}><AddWish/></button>
+              <button className={styles.addwish}>
+                <AddWish />
+              </button>
               <button className={styles.addtocart}>Add to cart</button>
               <button className={styles.buynow}>Buy now</button>
             </div>
