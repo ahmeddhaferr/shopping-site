@@ -36,7 +36,7 @@ export default function ItemPopup({ Item, isOpen, onClose }) {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 750px)" });
   if (!isOpen) return null;
   return (
-    <>
+    <div className={styles.main}>
       <div className={styles.overlay}></div>
       <div className={styles.pos}>
         <div className={styles.itemcard}>
@@ -113,6 +113,6 @@ export default function ItemPopup({ Item, isOpen, onClose }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

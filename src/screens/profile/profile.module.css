@@ -92,6 +92,7 @@
   border-radius: 10px;
   display: block;
   position: relative;
+  z-index: -1;
 }
 .circle_left {
   border: 1px solid #004cff;
