@@ -184,6 +184,7 @@
   font-weight: 300;
   line-height: 25px;
   text-align: center;
+  cursor: pointer;
 }
 .buynow {
   background-color:#004CFF;
@@ -197,6 +198,7 @@
   font-weight: 300;
   line-height: 25px;
   text-align: center;
+  cursor: pointer;
 }
 .addwish{
   border: none;
@@ -207,18 +209,11 @@
 
 @media (max-width: 750px) {
   .pos {
-    position: fixed;
     top: 0px;
-    background-color: black;
   }
   .itemcard {
-    z-index: 1;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    width: 100%;
     margin: auto;
     background-color: black;
   }

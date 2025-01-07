@@ -1,0 +1,196 @@
+.body {
+  padding: 30px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.profile_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.profile_pic {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 18px;
+}
+.profile_pic img {
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px 0px #00000029;
+  width: 40px;
+  height: 40px;
+}
+.profile_pic p {
+  font-family: Raleway;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.20999999344348907px;
+  text-align: left;
+}
+.action_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+.action_buttons button {
+  width: 40px;
+  height: 40px;
+  background-color: #e5ebfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.blue_button {
+  margin-top: 4px;
+  cursor: pointer;
+}
+.two_buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.two_buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Raleway;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17.61px;
+  letter-spacing: -0.15000000596046448px;
+  text-align: center;
+  border: none;
+  border-radius: 16px;
+  height: 30px;
+  cursor: pointer;
+  width: 45%;
+  background-color: #f9f9f9;
+  color: #000000;
+}
+.active {
+  color: #004cff !important;
+  background-color: #e5ebfc !important;
+}
+.Voucher_card {
+  margin-top: 20px;
+  border: 1px solid #004cff;
+  height: 100px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  display: block;
+  position: relative;
+}
+.circle_left {
+  border: 1px solid #004cff;
+  border-left: 1px solid white;
+  border-radius: 0px 150px 150px 0px;
+  height: 20px;
+  width: 10px;
+  position: absolute;
+  top: 40px;
+  left: -1px;
+  background-color: white;
+}
+.circle_right {
+  border: 1px solid #004cff;
+  border-right: 1px solid white;
+  border-radius: 150px 0px 0px 150px;
+  height: 20px;
+  width: 10px;
+  position: absolute;
+  top: 40px;
+  right: -1px;
+  background-color: white;
+}
+.Voucher {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #004cff;
+}
+.Voucher h1 {
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: -0.18000000715255737px;
+  text-align: left;
+  color: #004cff;
+  margin-left: 20px;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+.Voucher p {
+  font-family: Raleway;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.10999999940395355px;
+  text-align: center;
+  background-color: #f9f9f9;
+  width: 100px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 6px;
+  padding-top: 5px;
+}
+.first_purchase {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 10px;
+  gap: 8px;
+}
+.first_purchase h1 {
+  font-family: Raleway;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: -0.17000000178813934px;
+  text-align: left;
+  color: #202020;
+}
+.save_of {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.save_of p {
+  font-family: Nunito Sans;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: left;
+  margin-top: 2px;
+  margin-left: 20px;
+}
+.save_of button {
+  margin-right: 8px;
+  cursor: pointer;
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.14000000059604645px;
+  text-align: center;
+  border: 1px solid #0042e0;
+  background-color: #004CFF;
+  color: white;
+  border-radius: 6px;
+  width: 80px;
+  height: 26px;
+}

@@ -129,7 +129,7 @@
   transform: scale(110%);
   transition: 0.4s;
 }
-@media (max-width: 353px) {
+@media (max-width: 354px) {
   .items {
     display: flex;
     justify-content: center;
