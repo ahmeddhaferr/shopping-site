@@ -1,4 +1,4 @@
-.main{
+.main {
   position: relative;
   display: flex;
   justify-content: center;
@@ -9,8 +9,9 @@
   inset: 0;
   background-color: rgba(0, 0, 0, 0.605);
 }
-.pos {position: fixed;
-top: 20px;
+.pos {
+  position: fixed;
+  top: 20px;
   width: 100%;
 }
 .itemcard {
@@ -27,12 +28,12 @@ top: 20px;
   z-index: 2;
   border-radius: 10px 0px 0px 10px;
   height: 600px;
-  width: 400px;
+  width: 450px;
   overflow-y: hidden;
   scrollbar-width: none;
-  background-color:black;
 }
 .image img {
+  width: 450px;
   z-index: 2;
   height: 100%;
   border-radius: 10px 0px 0px 10px;
@@ -175,7 +176,7 @@ top: 20px;
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  background-color:inherit;
+  background-color: inherit;
   position: absolute;
   bottom: 0;
   width: 90%;
@@ -196,7 +197,7 @@ top: 20px;
   cursor: pointer;
 }
 .buynow {
-  background-color:#004CFF;
+  background-color: #004cff;
   border: none;
   border-radius: 8px;
   width: 128px;
@@ -209,7 +210,7 @@ top: 20px;
   text-align: center;
   cursor: pointer;
 }
-.addwish{
+.addwish {
   border: none;
   padding: 10px 10px 5px 10px;
   cursor: pointer;
@@ -222,24 +223,28 @@ top: 20px;
   }
   .itemcard {
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     margin: auto;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
   }
   .image {
-    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 0px;
+    width: 100%;
   }
   .image img {
     z-index: 2;
     height: 100%;
     border-radius: 0px;
+    width: auto;
   }
   .cart {
     z-index: 3;
     background-color: white;
     width: 92%;
-    height: 560px;
+    height: 100%;
     border-radius: 20px 20px 0px 0px;
     padding: 20px;
   }
