@@ -20,6 +20,7 @@ const sizes = [
 export default function ItemPopup({ Item, isOpen, onClose, fullItem }) {
   const [option, setOption] = useState(false);
   const [quantity, setQuantity] = useState(1);
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 750px)" });
 
   if (!isOpen) return null;
   return (
