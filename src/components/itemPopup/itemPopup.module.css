@@ -27,6 +27,10 @@ top: 20px;
   z-index: 2;
   border-radius: 10px 0px 0px 10px;
   height: 600px;
+  width: 400px;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  background-color:black;
 }
 .image img {
   z-index: 2;

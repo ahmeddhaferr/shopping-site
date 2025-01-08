@@ -5,6 +5,7 @@ import Starter from "./screens/starter/Starter";
 import { Route,Routes,BrowserRouter as Router } from "react-router";
 import Home from "./screens/home/home";
 import Profile from "./screens/profile/profile";
+import Wishlist from "./screens/wishlist/wishlist";
 function App() {
   return (
     <>
@@ -16,7 +17,7 @@ function App() {
           <Route path="/Login" element={<Login/>}></Route>
           <Route path="/Home" element={<Home/>}></Route>
           <Route path="/Profile" element={<Profile/>}></Route>
-          <Route path="/Wishlist" element={<Home/>}></Route>
+          <Route path="/Wishlist" element={<Wishlist/>}></Route>
           <Route path="/Cart" element={<Home/>}></Route>
           <Route path="/Categories" element={<Home/>}></Route>
         </Routes>

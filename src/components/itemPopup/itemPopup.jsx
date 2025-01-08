@@ -5,22 +5,9 @@ import More from "../../assets/more";
 import Less from "../../assets/less";
 import AddWish from "../../assets/addwish";
 import RightSign from "../../assets/rightSign.svg";
+import colorsData from "../../data/colors.json";
 import { useMediaQuery } from "react-responsive";
 
-const colors = [
-  {
-    url: "https://img.freepik.com/free-photo/future-little-boy-dreaming-about-profession-seamstress-childhood-planning-education-dream-concept-wants-become-successful-employee-fashion-style-industry-atelier-makes-clothes_155003-34341.jpg?t=st=1735580289~exp=1735583889~hmac=347bdab00ed6ed0e70a04a7794527d67650944212caf9a35db7439d4f42447a3&w=360",
-  },
-  {
-    url: "https://img.freepik.com/free-photo/future-little-boy-dreaming-about-profession-seamstress-childhood-planning-education-dream-concept-wants-become-successful-employee-fashion-style-industry-atelier-makes-clothes_155003-34341.jpg?t=st=1735580289~exp=1735583889~hmac=347bdab00ed6ed0e70a04a7794527d67650944212caf9a35db7439d4f42447a3&w=360",
-  },
-  {
-    url: "https://img.freepik.com/free-photo/future-little-boy-dreaming-about-profession-seamstress-childhood-planning-education-dream-concept-wants-become-successful-employee-fashion-style-industry-atelier-makes-clothes_155003-34341.jpg?t=st=1735580289~exp=1735583889~hmac=347bdab00ed6ed0e70a04a7794527d67650944212caf9a35db7439d4f42447a3&w=360",
-  },
-  {
-    url: "https://img.freepik.com/free-photo/future-little-boy-dreaming-about-profession-seamstress-childhood-planning-education-dream-concept-wants-become-successful-employee-fashion-style-industry-atelier-makes-clothes_155003-34341.jpg?t=st=1735580289~exp=1735583889~hmac=347bdab00ed6ed0e70a04a7794527d67650944212caf9a35db7439d4f42447a3&w=360",
-  },
-];
 const sizes = [
   { size: "S" },
   { size: "M" },
@@ -30,10 +17,10 @@ const sizes = [
   { size: "XXXL" },
 ];
 
-export default function ItemPopup({ Item, isOpen, onClose }) {
+export default function ItemPopup({ Item, isOpen, onClose, fullItem }) {
   const [option, setOption] = useState(false);
   const [quantity, setQuantity] = useState(1);
-  const isSmallScreen = useMediaQuery({ query: "(max-width: 750px)" });
+
   if (!isOpen) return null;
   return (
     <div className={styles.main}>
@@ -51,7 +38,7 @@ export default function ItemPopup({ Item, isOpen, onClose }) {
               </button>
             </div>
             <div className={styles.colorOptionFlex}>
-              {colors.map((col, index) => (
+              {colorsData.map((col, index) => (
                 <button
                   key={index}
                   className={styles.colorOptionCard}
@@ -80,7 +67,7 @@ export default function ItemPopup({ Item, isOpen, onClose }) {
               <div className={styles.flexcount}>
                 <button
                   onClick={() => {
-                    if (quantity == 0) {
+                    if (quantity == 1) {
                       return;
                     } else {
                       setQuantity(quantity - 1);
