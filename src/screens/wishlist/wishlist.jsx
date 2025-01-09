@@ -13,8 +13,8 @@ export default function Wishlist() {
   return (
     <>
       <Container MaxWidth="1850px">
-        <Header open={isSmallScreen ? false : true} />
-        <Footer open={isSmallScreen ? true : false} />
+        <Header open={!isSmallScreen} />
+        <Footer open={isSmallScreen} />
         <Container MaxWidth="750px">
         <div className={styles.body}>
             ohiolwerffg
