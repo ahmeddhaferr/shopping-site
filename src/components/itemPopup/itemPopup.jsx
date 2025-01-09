@@ -17,10 +17,12 @@ const sizes = [
   { size: "XXXL" },
 ];
 
-export default function ItemPopup({ Item, isOpen, onClose, fullItem }) {
-  const [option, setOption] = useState(false);
+export default function ItemPopup({ Item, isOpen, onClose }) {
+  const [option, setOption] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const [itemSize, setItemSize] = useState(null);
   const isSmallScreen = useMediaQuery({ query: "(max-width: 750px)" });
+  const [addWishColor,setAddWishColor]=useState(false)
 
   if (!isOpen) return null;
   return (
@@ -35,7 +37,14 @@ export default function ItemPopup({ Item, isOpen, onClose, fullItem }) {
             <div className={styles.colorOption}>
               <h1>Color Options</h1>
               <button onClick={onClose} className={styles.closebtn}>
-                <CloseBtn />
+                <CloseBtn
+                  onClick={() => {
+                    setOption(null)
+                    setItemSize(null)
+                    setQuantity(1)
+                    setAddWishColor(false)
+                  }}
+                />
               </button>
             </div>
             <div className={styles.colorOptionFlex}>
@@ -44,13 +53,15 @@ export default function ItemPopup({ Item, isOpen, onClose, fullItem }) {
                   key={index}
                   className={styles.colorOptionCard}
                   onClick={() => {
-                    setOption(!option);
+                    setOption(index);
                   }}
                 >
                   <img src={col.url} className={styles.imgcolor} />
                   <img
                     src={RightSign}
-                    className={option ? styles.RightSign : styles.displayNone}
+                    className={
+                      option === index ? styles.RightSign : styles.displayNone
+                    }
                   />
                 </button>
               ))}
@@ -58,7 +69,15 @@ export default function ItemPopup({ Item, isOpen, onClose, fullItem }) {
             <h1>size</h1>
             <div className={styles.size}>
               {sizes.map((e, index) => (
-                <button key={index} className={styles.sizebtn}>
+                <button
+                  key={index}
+                  onClick={() => {
+                    setItemSize(index);
+                  }}
+                  className={
+                    itemSize == index ? styles.active_sizebtn : styles.sizebtn
+                  }
+                >
                   {e.size}
                 </button>
               ))}
@@ -92,8 +111,13 @@ export default function ItemPopup({ Item, isOpen, onClose, fullItem }) {
               </div>
             </div>
             <div className={styles.actionbtns}>
-              <button className={styles.addwish}>
-                <AddWish />
+              <button
+                className={styles.addwish}
+                onClick={() => {
+                  setAddWishColor(true)
+                }}
+              >
+                <AddWish color={addWishColor ? "#004CFF":"black"}/>
               </button>
               <button className={styles.addtocart}>Add to cart</button>
               <button className={styles.buynow}>Buy now</button>
