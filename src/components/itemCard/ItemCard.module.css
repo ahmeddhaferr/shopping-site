@@ -1,13 +1,5 @@
-.body{
-    padding: 30px 20px 0 20px;
-}
 .items {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 30px;
-    margin-top: 10px;
-    flex-wrap: wrap;
+    
   }
   .items p {
     margin-top: 8px;

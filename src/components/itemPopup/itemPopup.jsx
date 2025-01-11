@@ -7,6 +7,7 @@ import AddWish from "../../assets/addwish";
 import RightSign from "../../assets/rightSign.svg";
 import colorsData from "../../data/colors.json";
 import { useMediaQuery } from "react-responsive";
+import { useStore } from "../../usestore";
 
 const sizes = [
   { size: "S" },
@@ -22,7 +23,20 @@ export default function ItemPopup({ Item, isOpen, onClose }) {
   const [quantity, setQuantity] = useState(1);
   const [itemSize, setItemSize] = useState(null);
   const isSmallScreen = useMediaQuery({ query: "(max-width: 750px)" });
-  const [addWishColor,setAddWishColor]=useState(false)
+  const [addWishColor, setAddWishColor] = useState(false);
+
+  const { wishListItem, setWishListItem } = useStore();
+
+  let Addto = wishListItem.find((el) => el.id === Item.id);
+
+  const handleAddToWishList = () => {
+    let newArr = [];
+    if (Addto) newArr = wishListItem.filter((el) => el.id !== Item.id);
+    else newArr = [...wishListItem, Item];
+    setWishListItem(newArr);
+    localStorage.setItem("Item", JSON.stringify(newArr));
+    console.log("hello");
+  };
 
   if (!isOpen) return null;
   return (
@@ -31,7 +45,7 @@ export default function ItemPopup({ Item, isOpen, onClose }) {
       <div className={styles.pos}>
         <div className={styles.itemcard}>
           <div className={styles.image}>
-            <img src={Item} />
+            <img src={Item.image} />
           </div>
           <div className={styles.cart}>
             <div className={styles.colorOption}>
@@ -39,28 +53,28 @@ export default function ItemPopup({ Item, isOpen, onClose }) {
               <button onClick={onClose} className={styles.closebtn}>
                 <CloseBtn
                   onClick={() => {
-                    setOption(null)
-                    setItemSize(null)
-                    setQuantity(1)
-                    setAddWishColor(false)
+                    setOption(null);
+                    setItemSize(null);
+                    setQuantity(1);
+                    setAddWishColor(false);
                   }}
                 />
               </button>
             </div>
             <div className={styles.colorOptionFlex}>
-              {colorsData.map((col, index) => (
+              {colorsData.map((col) => (
                 <button
-                  key={index}
+                  key={col.id}
                   className={styles.colorOptionCard}
                   onClick={() => {
-                    setOption(index);
+                    setOption(col.id);
                   }}
                 >
                   <img src={col.url} className={styles.imgcolor} />
                   <img
                     src={RightSign}
                     className={
-                      option === index ? styles.RightSign : styles.displayNone
+                      option === col.id ? styles.RightSign : styles.displayNone
                     }
                   />
                 </button>
@@ -114,10 +128,11 @@ export default function ItemPopup({ Item, isOpen, onClose }) {
               <button
                 className={styles.addwish}
                 onClick={() => {
-                  setAddWishColor(true)
+                  setAddWishColor(true);
+                  handleAddToWishList();
                 }}
               >
-                <AddWish color={addWishColor ? "#004CFF":"black"}/>
+                <AddWish color={addWishColor ? "#004CFF" : "black"} />
               </button>
               <button className={styles.addtocart}>Add to cart</button>
               <button className={styles.buynow}>Buy now</button>

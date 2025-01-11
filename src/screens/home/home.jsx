@@ -4,9 +4,10 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import Container from "../../components/container/container";
 import { useMediaQuery } from "react-responsive";
-import ItemPopup from "../../components/itemPopup/itemPopup";
 import itemcardData from "../../data/itemcard.json";
 import categoryData from "../../data/category.json";
+import ItemCard from "../../components/itemCard/ItemCard";
+import ItemPopup from "../../components/itemPopup/itemPopup";
 
 export default function Home() {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 750px)" });
@@ -24,8 +25,8 @@ export default function Home() {
               <div className={styles.search}></div>
             </div>
             <div className={styles.catagories}>
-              {categoryData?.map((cat, index) => (
-                <div key={index} className={styles.catagori}>
+              {categoryData?.map((cat) => (
+                <div key={cat.id} className={styles.catagori}>
                   <div className={styles.imgContainer}>
                     <img src={cat.image} />
                   </div>
@@ -39,28 +40,24 @@ export default function Home() {
                 <button></button>
               </div>
               <div className={styles.items}>
-                {itemcardData?.map((card, index) => (
-                  <div key={index}>
-                    <button
-                      className={styles.item}
-                      onClick={() => {
-                        setItemOpen(card.image);
-                        setIsOpen(true);
-                      }}
-                    >
-                      {" "}
-                      <img src={card.image} />{" "}
-                    </button>
-                    <p>{card.discription}</p>
-                    <h2>${card.price}</h2>
-                  </div>
+                {itemcardData?.map((card) => (
+                  <ItemCard
+                    info={card}
+                    key={card.id}
+                    setOpen={() => {
+                      setIsOpen(true);
+                    }}
+                    setInfo={() => {
+                      setItemOpen(card);
+                    }}
+                  />
                 ))}
               </div>
-              <div></div>
             </div>
           </div>
         </Container>
         <ItemPopup
+          className={styles}
           Item={itemOpen}
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
