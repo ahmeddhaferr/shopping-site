@@ -6,6 +6,8 @@ import { Route,Routes,BrowserRouter as Router } from "react-router";
 import Home from "./screens/home/home";
 import Profile from "./screens/profile/profile";
 import Wishlist from "./screens/wishlist/wishlist";
+import Cart from "./screens/cart/Cart";
+import Categories from "./screens/categories/Categories";
 function App() {
   return (
     <>
@@ -18,8 +20,8 @@ function App() {
           <Route path="/Home" element={<Home/>}></Route>
           <Route path="/Profile" element={<Profile/>}></Route>
           <Route path="/Wishlist" element={<Wishlist/>}></Route>
-          <Route path="/Cart" element={<Home/>}></Route>
-          <Route path="/Categories" element={<Home/>}></Route>
+          <Route path="/Cart" element={<Cart/>}></Route>
+          <Route path="/Categories" element={<Categories/>}></Route>
         </Routes>
        </Router>
       </div>

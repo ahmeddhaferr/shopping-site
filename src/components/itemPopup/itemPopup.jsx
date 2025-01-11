@@ -6,8 +6,9 @@ import Less from "../../assets/less";
 import AddWish from "../../assets/addwish";
 import RightSign from "../../assets/rightSign.svg";
 import colorsData from "../../data/colors.json";
-import { useMediaQuery } from "react-responsive";
 import { useStore } from "../../usestore";
+import AddWishBtn from "../addWishBtn/AddWishBtn";
+import AddCartBtn from "../addCartBtn/AddCartBtn";
 
 const sizes = [
   { size: "S" },
@@ -22,21 +23,6 @@ export default function ItemPopup({ Item, isOpen, onClose }) {
   const [option, setOption] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [itemSize, setItemSize] = useState(null);
-  const isSmallScreen = useMediaQuery({ query: "(max-width: 750px)" });
-  const [addWishColor, setAddWishColor] = useState(false);
-
-  const { wishListItem, setWishListItem } = useStore();
-
-  let Addto = wishListItem.find((el) => el.id === Item.id);
-
-  const handleAddToWishList = () => {
-    let newArr = [];
-    if (Addto) newArr = wishListItem.filter((el) => el.id !== Item.id);
-    else newArr = [...wishListItem, Item];
-    setWishListItem(newArr);
-    localStorage.setItem("Item", JSON.stringify(newArr));
-    console.log("hello");
-  };
 
   if (!isOpen) return null;
   return (
@@ -56,7 +42,6 @@ export default function ItemPopup({ Item, isOpen, onClose }) {
                     setOption(null);
                     setItemSize(null);
                     setQuantity(1);
-                    setAddWishColor(false);
                   }}
                 />
               </button>
@@ -125,16 +110,8 @@ export default function ItemPopup({ Item, isOpen, onClose }) {
               </div>
             </div>
             <div className={styles.actionbtns}>
-              <button
-                className={styles.addwish}
-                onClick={() => {
-                  setAddWishColor(true);
-                  handleAddToWishList();
-                }}
-              >
-                <AddWish color={addWishColor ? "#004CFF" : "black"} />
-              </button>
-              <button className={styles.addtocart}>Add to cart</button>
+              <AddWishBtn Item={Item} />
+              <AddCartBtn Item={Item} />
               <button className={styles.buynow}>Buy now</button>
             </div>
           </div>
