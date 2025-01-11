@@ -6,7 +6,7 @@ import { Route,Routes,BrowserRouter as Router } from "react-router";
 import Home from "./screens/home/home";
 import Profile from "./screens/profile/profile";
 import Wishlist from "./screens/wishlist/wishlist";
-import Cart from "./screens/cart/cart";
+import Cart from "./screens/cart/Cart";
 import Categories from "./screens/categories/Categories";
 function App() {
   return (
