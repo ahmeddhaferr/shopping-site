@@ -1,5 +1,6 @@
 .body{
     padding: 30px 20px 0 20px;
+    margin-bottom: 100px;
 }
 .items {
     display: flex;
@@ -49,3 +50,38 @@
     transform: scale(110%);
     transition: 0.4s;
   }
+  .wishHead{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+  }
+  .wishHead h1{
+    font-family: Raleway;
+font-size: 28px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: -0.2800000011920929px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #202020;
+  }
+  .wishHead p{
+    font-family: Raleway;
+font-size: 28px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: -0.2800000011920929px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #202020;
+background-color: #E5EBFC;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}

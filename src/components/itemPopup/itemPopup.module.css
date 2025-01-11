@@ -197,20 +197,7 @@
   width: 90%;
 }
 
-.addtocart {
-  background-color: #202020;
-  border: none;
-  border-radius: 8px;
-  width: 128px;
-  height: 40px;
-  color: white;
-  font-family: Nunito Sans;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 25px;
-  text-align: center;
-  cursor: pointer;
-}
+
 .buynow {
   background-color: #004cff;
   border: none;

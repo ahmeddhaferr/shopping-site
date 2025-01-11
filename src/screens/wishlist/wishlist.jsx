@@ -9,7 +9,6 @@ import { useStore } from "../../usestore";
 export default function Wishlist() {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 750px)" });
   const { wishListItem, setWishListItem } = useStore();
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     let wishItem = localStorage.getItem("Item");
@@ -23,6 +22,10 @@ export default function Wishlist() {
         <Footer open={isSmallScreen} />
         <Container MaxWidth="750px">
           <div className={styles.body}>
+            <div className={styles.wishHead}>
+            <h1>Wishlist</h1>
+<p>{wishListItem.length}</p>
+            </div>
             <div className={styles.items}>
               {wishListItem.map((card) => (
                 <div key={card.id}>
