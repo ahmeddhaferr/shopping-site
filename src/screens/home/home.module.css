@@ -30,9 +30,9 @@
 .catagories {
   margin-top: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 .imgContainer {
@@ -83,52 +83,13 @@
 }
 .items {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  gap: 4px;
+  gap: 30px;
   margin-top: 10px;
   flex-wrap: wrap;
 }
-.items p {
-  margin-top: 8px;
-  width: 155px;
-  font-family: Nunito Sans;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-.items h2 {
-  margin-top: 8px;
-  font-family: Raleway;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 21px;
-  letter-spacing: -0.17000000178813934px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-.item {
-  width: 155px;
-  height: 171px;
-  background-color: #e5ebfc;
-  border: 5px solid white;
-  border-radius: 10px;
-  box-shadow: 0px 5px 10px 0px #0000001a;
-  overflow: hidden;
-  cursor: pointer;
-}
-.item img {
-  width: 155px;
-  transition: 0.2s;
-}
-.item img:hover {
-  transform: scale(110%);
-  transition: 0.4s;
-}
+
 @media (max-width: 354px) {
   .items {
     display: flex;

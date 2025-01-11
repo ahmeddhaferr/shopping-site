@@ -225,12 +225,6 @@
   text-align: center;
   cursor: pointer;
 }
-.addwish {
-  border: none;
-  padding: 10px 10px 5px 10px;
-  cursor: pointer;
-  border-radius: 8px;
-}
 
 @media (max-width: 750px) {
   .pos {
