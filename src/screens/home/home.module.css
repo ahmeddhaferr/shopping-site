@@ -83,13 +83,17 @@
 }
 .items {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 30px;
   margin-top: 10px;
   flex-wrap: wrap;
 }
-
+@media (max-Width:380px){
+  .items {
+    justify-content: center;
+  }
+}
 @media (max-width: 354px) {
   .items {
     display: flex;
