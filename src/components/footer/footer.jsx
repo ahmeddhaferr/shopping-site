@@ -7,12 +7,12 @@ import CartBtn from "../../assets/cartBtn";
 import PersonBtn from "../../assets/personBtn";
 import { Link, useLocation } from "react-router";
 
-export default function Footer({ open }) {
+export default function Footer({ open ,zee=0}) {
   let { pathname } = useLocation();
   return (
     <>
       {open && (
-        <div className={styles.footer}>
+        <div className={styles.footer} style={{zIndex:zee}}>
           <Link to={"/Home"}>
             <HomeBtn
               color={pathname === "/Home" ? "black" : "#004CFF"}

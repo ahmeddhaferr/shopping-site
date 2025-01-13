@@ -1,0 +1,111 @@
+.body{
+    padding: 30px 20px 0 20px;
+    margin-bottom: 100px;
+}
+.items {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .items p {
+    margin-top: 8px;
+    width: 155px;
+    font-family: Nunito Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .items h2 {
+    margin-top: 8px;
+    font-family: Raleway;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.17000000178813934px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .item {
+    width: 155px;
+    height: 171px;
+    background-color: #e5ebfc;
+    border: 5px solid white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px #0000001a;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .item img {
+    width: 155px;
+    transition: 0.2s;
+  }
+  .item img:hover {
+    transform: scale(110%);
+    transition: 0.4s;
+  }
+  .wishHead {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+  }
+  .wishHead h1 {
+    font-family: Raleway;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.2800000011920929px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #202020;
+  }
+  .wishHead p {
+    font-family: Raleway;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.2800000011920929px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #202020;
+    background-color: #e5ebfc;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.when_empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .when_empty p {
+    font-family: Raleway;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.2800000011920929px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #202020;
+  }
+  .when_empty img {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+  }
+  
