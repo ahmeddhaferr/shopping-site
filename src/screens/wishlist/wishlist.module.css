@@ -4,7 +4,7 @@
 }
 .items {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 30px;
   margin-top: 10px;
@@ -124,8 +124,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0px;
+  position: fixed;
+  top: 50px;
   width: 100%;
 }
 .review img {
@@ -164,6 +164,9 @@
 @media (max-width: 750px) {
   .review {
     top: 20px;
+  }
+  .overlay{
+    background-color: black;
   }
 }
 @media (max-width: 450px) {
