@@ -4,9 +4,10 @@ import Container from "../../components/container/container.jsx";
 import Background from "../../assets/rigisterBackground.jsx";
 import Camera from "../../assets/camera.jsx";
 import CostumeButton from "../../components/costumeButton/costumeButton.jsx";
-import Eye from "../../assets/Eye.jsx";
 import Arrow from "../../assets/arrowDown.jsx";
 import { Link } from "react-router";
+import EyeClosed from "../../assets/EyeClosed.jsx";
+import EyeShow from "../../assets/EyeShow.jsx";
 
 const flags = [
   {
@@ -77,7 +78,6 @@ export default function register() {
               type="text"
               placeholder="Email"
               value={email}
-              on
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
@@ -90,7 +90,11 @@ export default function register() {
                 setInputPass(e.target.value);
               }}
             />
-            <Eye className={styles.Eye} onClick={handlePassword} />
+            {password === "password" ? (
+              <EyeClosed className={styles.Eye} onClick={handlePassword} />
+            ) : (
+              <EyeShow className={styles.Eye} onClick={handlePassword} />
+            )}
             <div className={styles.numInput}>
               <div className={styles.flag}>
                 <img src={countryImg} />

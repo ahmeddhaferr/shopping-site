@@ -7,6 +7,7 @@ import CostumeButton from "../../components/costumeButton/costumeButton";
 import { Link } from "react-router";
 export default function Login() {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div>
       <LoginBackground className={styles.Background} />
@@ -26,8 +27,16 @@ export default function Login() {
               setEmail(e.target.value);
             }}
           />
+          <input
+            type="password"
+            placeholder="password"
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+          />
           <div style={{ width: "100%", marginTop: "45px" }}>
-            <Link to={email === "" ? "" : "/Home"}>
+            <Link to={email === "" || password === "" ? "" : "/Home"}>
               {" "}
               <CostumeButton name="next" />
             </Link>
